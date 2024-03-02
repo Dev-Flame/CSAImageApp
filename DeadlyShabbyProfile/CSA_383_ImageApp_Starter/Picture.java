@@ -572,6 +572,21 @@ public static Picture showDifferentArea (Picture pic, ArrayList<Point> myPoints)
     beach.explore();
     beach.reveal();
     beach.explore();*/
+    
   }
   
+public void setAllPixels(Pixel[][] newPixels) {
+  int width = newPixels[0].length;
+  int height = newPixels.length;
+
+  Pixel[][] pixels = this.getPixels2D();
+
+  for (int row = 0; row < height; row++) {
+      for (int col = 0; col < width; col++) {
+          pixels[row][col].setColor(newPixels[row][col].getColor());
+      }
+  }
+}
+
+
 } // this } is the end of class Picture, put all new methods before this
